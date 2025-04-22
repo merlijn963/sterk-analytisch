@@ -4,91 +4,91 @@ import { useNavigate } from 'react-router-dom';
 const questions = [
   {
     id: 1,
-    question: "Je ziet de volgende resultaten van een statistische analyse:\n- Normaliteitstest: p = 0.68\n- Homogeniteitstest: p = 0.62\n- t-test: p = 0.04\n- Cohen's d = 0.85\n\nWat is de juiste interpretatie?",
+    question: "Je ziet de volgende resultaten van een statistische analyse:\n- Normaliteitstest: p = 0.75\n- Homogeniteitstest: p = 0.55\n- t-test: p = 0.02\n- Cohen's d = 0.65\n\nWat is de juiste interpretatie?",
     options: [
       {
         id: "a",
-        text: "De data is normaal verdeeld (p = 0.68), de varianties zijn gelijk (p = 0.62), en er is een significant verschil tussen de groepen (p = 0.04) met een groot effect (d = 0.85)",
+        text: "De data is normaal verdeeld (p = 0.75), de varianties zijn gelijk (p = 0.55), en er is een significant verschil tussen de groepen (p = 0.02) met een middelmatig effect (d = 0.65)",
         isCorrect: true,
-        explanation: "Dit is correct omdat:\n1. De normaliteitstest p = 0.68 > 0.5, dus de data is normaal verdeeld\n2. De homogeniteitstest p = 0.62 > 0.5, dus de varianties zijn gelijk\n3. De t-test p = 0.04 < 0.05, dus er is een significant verschil\n4. Cohen's d = 0.85 > 0.8, dus er is een groot effect"
+        explanation: "Dit is correct omdat:\n1. De normaliteitstest p = 0.75 > 0.5, dus de data is normaal verdeeld\n2. De homogeniteitstest p = 0.55 > 0.5, dus de varianties zijn gelijk\n3. De t-test p = 0.02 < 0.05, dus er is een significant verschil\n4. Cohen's d = 0.65 is tussen 0.2 en 0.8, dus er is een middelmatig effect"
       },
       {
         id: "b",
-        text: "De data is niet normaal verdeeld (p = 0.68), de varianties zijn ongelijk (p = 0.62), en er is geen significant verschil (p = 0.04)",
+        text: "De data is niet normaal verdeeld (p = 0.75), de varianties zijn ongelijk (p = 0.55), en er is geen significant verschil (p = 0.02)",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.68 > 0.5, dus de data is WEL normaal verdeeld\n2. De homogeniteitstest p = 0.62 > 0.5, dus de varianties zijn WEL gelijk\n3. De t-test p = 0.04 < 0.05, dus er is WEL een significant verschil"
+        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.75 > 0.5, dus de data is WEL normaal verdeeld\n2. De homogeniteitstest p = 0.55 > 0.5, dus de varianties zijn WEL gelijk\n3. De t-test p = 0.02 < 0.05, dus er is WEL een significant verschil"
       },
       {
         id: "c",
-        text: "De data is normaal verdeeld (p = 0.68), de varianties zijn gelijk (p = 0.62), maar er is geen significant verschil (p = 0.04)",
+        text: "De data is normaal verdeeld (p = 0.75), de varianties zijn gelijk (p = 0.55), maar er is geen significant verschil (p = 0.02)",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De eerste twee beweringen zijn correct (p > 0.5 voor beide tests)\n2. Maar de t-test p = 0.04 < 0.05, dus er is WEL een significant verschil"
+        explanation: "Dit is fout omdat:\n1. De eerste twee beweringen zijn correct (p > 0.5 voor beide tests)\n2. Maar de t-test p = 0.02 < 0.05, dus er is WEL een significant verschil"
       },
       {
         id: "d",
-        text: "De data is normaal verdeeld (p = 0.68), de varianties zijn ongelijk (p = 0.62), dus je moet Mann-Whitney gebruiken",
+        text: "De data is normaal verdeeld (p = 0.75), de varianties zijn ongelijk (p = 0.55), dus je moet Mann-Whitney gebruiken",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.68 > 0.5, dus de data is normaal verdeeld\n2. De homogeniteitstest p = 0.62 > 0.5, dus de varianties zijn WEL gelijk\n3. Omdat beide aannames voldaan zijn (p > 0.5), is de t-test geschikt en hoef je geen Mann-Whitney te gebruiken"
+        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.75 > 0.5, dus de data is normaal verdeeld\n2. De homogeniteitstest p = 0.55 > 0.5, dus de varianties zijn WEL gelijk\n3. Omdat beide aannames voldaan zijn (p > 0.5), is de t-test geschikt en hoef je geen Mann-Whitney te gebruiken"
       }
     ]
   },
   {
     id: 2,
-    question: "Je ziet de volgende resultaten van een statistische analyse:\n- Normaliteitstest: p = 0.45\n- Homogeniteitstest: p = 0.32\n- Mann-Whitney U test: p = 0.03\n- Effectgrootte r = 0.42\n\nWat is de juiste interpretatie?",
+    question: "Je ziet de volgende resultaten van een statistische analyse:\n- Normaliteitstest: p = 0.40\n- Homogeniteitstest: p = 0.25\n- Mann-Whitney U test: p = 0.01\n- Effectgrootte r = 0.35\n\nWat is de juiste interpretatie?",
     options: [
       {
         id: "a",
-        text: "De data is niet normaal verdeeld (p = 0.45), de varianties zijn ongelijk (p = 0.32), en er is een significant verschil (p = 0.03) met een groot effect (r = 0.42)",
+        text: "De data is niet normaal verdeeld (p = 0.40), de varianties zijn ongelijk (p = 0.25), en er is een significant verschil (p = 0.01) met een groot effect (r = 0.35)",
         isCorrect: true,
-        explanation: "Dit is correct omdat:\n1. De normaliteitstest p = 0.45 < 0.5, dus de data is niet normaal verdeeld\n2. De homogeniteitstest p = 0.32 < 0.5, dus de varianties zijn ongelijk\n3. De Mann-Whitney p = 0.03 < 0.05, dus er is een significant verschil\n4. r = 0.42 > 0.3, dus er is een groot effect"
+        explanation: "Dit is correct omdat:\n1. De normaliteitstest p = 0.40 < 0.5, dus de data is niet normaal verdeeld\n2. De homogeniteitstest p = 0.25 < 0.5, dus de varianties zijn ongelijk\n3. De Mann-Whitney p = 0.01 < 0.05, dus er is een significant verschil\n4. r = 0.35 > 0.3, dus er is een groot effect"
       },
       {
         id: "b",
-        text: "De data is normaal verdeeld (p = 0.45), de varianties zijn gelijk (p = 0.32), dus je moet de t-test gebruiken",
+        text: "De data is normaal verdeeld (p = 0.40), de varianties zijn gelijk (p = 0.25), dus je moet de t-test gebruiken",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.45 < 0.5, dus de data is NIET normaal verdeeld\n2. De homogeniteitstest p = 0.32 < 0.5, dus de varianties zijn NIET gelijk\n3. Omdat beide aannames niet voldaan zijn (p < 0.5), moet je Mann-Whitney gebruiken, niet de t-test"
+        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.40 < 0.5, dus de data is NIET normaal verdeeld\n2. De homogeniteitstest p = 0.25 < 0.5, dus de varianties zijn NIET gelijk\n3. Omdat beide aannames niet voldaan zijn (p < 0.5), moet je Mann-Whitney gebruiken, niet de t-test"
       },
       {
         id: "c",
-        text: "De data is niet normaal verdeeld (p = 0.45), de varianties zijn ongelijk (p = 0.32), maar er is geen significant verschil (p = 0.03)",
+        text: "De data is niet normaal verdeeld (p = 0.40), de varianties zijn ongelijk (p = 0.25), maar er is geen significant verschil (p = 0.01)",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De eerste twee beweringen zijn correct (p < 0.5 voor beide tests)\n2. Maar de Mann-Whitney p = 0.03 < 0.05, dus er is WEL een significant verschil"
+        explanation: "Dit is fout omdat:\n1. De eerste twee beweringen zijn correct (p < 0.5 voor beide tests)\n2. Maar de Mann-Whitney p = 0.01 < 0.05, dus er is WEL een significant verschil"
       },
       {
         id: "d",
-        text: "De data is niet normaal verdeeld (p = 0.45), de varianties zijn ongelijk (p = 0.32), en er is een significant verschil (p = 0.03) met een klein effect (r = 0.42)",
+        text: "De data is niet normaal verdeeld (p = 0.40), de varianties zijn ongelijk (p = 0.25), en er is een significant verschil (p = 0.01) met een klein effect (r = 0.35)",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De eerste drie beweringen zijn correct\n2. Maar r = 0.42 > 0.3, dus er is een GROOT effect, niet een klein effect"
+        explanation: "Dit is fout omdat:\n1. De eerste drie beweringen zijn correct\n2. Maar r = 0.35 > 0.3, dus er is een GROOT effect, niet een klein effect"
       }
     ]
   },
   {
     id: 3,
-    question: "Je ziet de volgende resultaten van een statistische analyse:\n- Normaliteitstest: p = 0.72\n- Homogeniteitstest: p = 0.58\n- t-test: p = 0.07\n- Cohen's d = 0.52\n\nWat is de juiste interpretatie?",
+    question: "Je ziet de volgende resultaten van een statistische analyse:\n- Normaliteitstest: p = 0.80\n- Homogeniteitstest: p = 0.60\n- t-test: p = 0.10\n- Cohen's d = 0.45\n\nWat is de juiste interpretatie?",
     options: [
       {
         id: "a",
-        text: "De data is normaal verdeeld (p = 0.72), de varianties zijn gelijk (p = 0.58), maar er is geen significant verschil (p = 0.07) met een middelmatig effect (d = 0.52)",
+        text: "De data is normaal verdeeld (p = 0.80), de varianties zijn gelijk (p = 0.60), maar er is geen significant verschil (p = 0.10) met een middelmatig effect (d = 0.45)",
         isCorrect: true,
-        explanation: "Dit is correct omdat:\n1. De normaliteitstest p = 0.72 > 0.5, dus de data is normaal verdeeld\n2. De homogeniteitstest p = 0.58 > 0.5, dus de varianties zijn gelijk\n3. De t-test p = 0.07 > 0.05, dus er is geen significant verschil\n4. Cohen's d = 0.52 is tussen 0.2 en 0.8, dus er is een middelmatig effect"
+        explanation: "Dit is correct omdat:\n1. De normaliteitstest p = 0.80 > 0.5, dus de data is normaal verdeeld\n2. De homogeniteitstest p = 0.60 > 0.5, dus de varianties zijn gelijk\n3. De t-test p = 0.10 > 0.05, dus er is geen significant verschil\n4. Cohen's d = 0.45 is tussen 0.2 en 0.8, dus er is een middelmatig effect"
       },
       {
         id: "b",
-        text: "De data is niet normaal verdeeld (p = 0.72), de varianties zijn ongelijk (p = 0.58), dus je moet Mann-Whitney gebruiken",
+        text: "De data is niet normaal verdeeld (p = 0.80), de varianties zijn ongelijk (p = 0.60), dus je moet Mann-Whitney gebruiken",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.72 > 0.5, dus de data is WEL normaal verdeeld\n2. De homogeniteitstest p = 0.58 > 0.5, dus de varianties zijn WEL gelijk\n3. Omdat beide aannames voldaan zijn (p > 0.5), is de t-test geschikt en hoef je geen Mann-Whitney te gebruiken"
+        explanation: "Dit is fout omdat:\n1. De normaliteitstest p = 0.80 > 0.5, dus de data is WEL normaal verdeeld\n2. De homogeniteitstest p = 0.60 > 0.5, dus de varianties zijn WEL gelijk\n3. Omdat beide aannames voldaan zijn (p > 0.5), is de t-test geschikt en hoef je geen Mann-Whitney te gebruiken"
       },
       {
         id: "c",
-        text: "De data is normaal verdeeld (p = 0.72), de varianties zijn gelijk (p = 0.58), en er is een significant verschil (p = 0.07)",
+        text: "De data is normaal verdeeld (p = 0.80), de varianties zijn gelijk (p = 0.60), en er is een significant verschil (p = 0.10)",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De eerste twee beweringen zijn correct (p > 0.5 voor beide tests)\n2. Maar de t-test p = 0.07 > 0.05, dus er is GEEN significant verschil"
+        explanation: "Dit is fout omdat:\n1. De eerste twee beweringen zijn correct (p > 0.5 voor beide tests)\n2. Maar de t-test p = 0.10 > 0.05, dus er is GEEN significant verschil"
       },
       {
         id: "d",
-        text: "De data is normaal verdeeld (p = 0.72), de varianties zijn gelijk (p = 0.58), en er is geen significant verschil (p = 0.07) met een groot effect (d = 0.52)",
+        text: "De data is normaal verdeeld (p = 0.80), de varianties zijn gelijk (p = 0.60), en er is geen significant verschil (p = 0.10) met een groot effect (d = 0.45)",
         isCorrect: false,
-        explanation: "Dit is fout omdat:\n1. De eerste drie beweringen zijn correct\n2. Maar Cohen's d = 0.52 is tussen 0.2 en 0.8, dus er is een MIDDELMATIG effect, niet een groot effect"
+        explanation: "Dit is fout omdat:\n1. De eerste drie beweringen zijn correct\n2. Maar Cohen's d = 0.45 is tussen 0.2 en 0.8, dus er is een MIDDELMATIG effect, niet een groot effect"
       }
     ]
   }
@@ -226,4 +226,4 @@ const Quiz: React.FC = () => {
   );
 };
 
-export default Quiz; 
+export default Quiz;

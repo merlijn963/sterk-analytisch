@@ -25,6 +25,7 @@ const Uitleg: React.FC = () => {
               <li>p &gt; 0.5: De data is normaal verdeeld</li>
               <li>p &lt; 0.5: De data is niet normaal verdeeld</li>
             </ul>
+            <p className="italic mb-2">Komt voor bij: t-test, ANOVA</p>
             <div className="mt-3 bg-yellow-50 p-3 rounded-lg">
               <p className="font-semibold">🍼 Babytolk:</p>
               <p>
@@ -46,6 +47,7 @@ const Uitleg: React.FC = () => {
               <li>p &gt; 0.5: De varianties zijn gelijk</li>
               <li>p &lt; 0.5: De varianties zijn ongelijk</li>
             </ul>
+            <p className="italic mb-2">Komt voor bij: t-test, ANOVA</p>
             <div className="mt-3 bg-yellow-50 p-3 rounded-lg">
               <p className="font-semibold">🍼 Babytolk:</p>
               <p>
@@ -64,6 +66,7 @@ const Uitleg: React.FC = () => {
               <li>p &lt; 0.05: Er is een significant verschil/verband</li>
               <li>p &gt; 0.05: Er is geen significant verschil/verband</li>
             </ul>
+            <p className="italic mb-2">Komt voor bij: t-test, ANOVA, correlatietest, chi-kwadraat-test</p>
             <div className="mt-3 bg-yellow-50 p-3 rounded-lg">
               <p className="font-semibold">🍼 Babytolk:</p>
               <p>
@@ -94,6 +97,7 @@ const Uitleg: React.FC = () => {
                 </ul>
               </li>
             </ul>
+            <p className="italic mb-2">Komt voor bij: t-test, ANOVA, correlatietest</p>
             <div className="mt-3 bg-yellow-50 p-3 rounded-lg">
               <p className="font-semibold">🍼 Babytolk:</p>
               <p>
@@ -119,6 +123,7 @@ const Uitleg: React.FC = () => {
                 </ul>
               </li>
             </ul>
+            <p className="italic mb-2">Komt voor bij: chi-kwadraat-test</p>
             <div className="mt-3 bg-yellow-50 p-3 rounded-lg">
               <p className="font-semibold">🍼 Babytolk:</p>
               <p>
@@ -138,6 +143,7 @@ const Uitleg: React.FC = () => {
               <li>Vergelijkbaar met Cohen's d, maar dan voor meerdere groepen</li>
               <li>Hoe hoger, hoe beter de groepjes het verschil verklaren</li>
             </ul>
+            <p className="italic mb-2">Komt voor bij: ANOVA</p>
             <div className="mt-3 bg-yellow-50 p-3 rounded-lg">
               <p className="font-semibold">🍼 Babytolk:</p>
               <p>
@@ -345,4 +351,4 @@ const Uitleg: React.FC = () => {
   );
 };
 
-export default Uitleg; 
+export default Uitleg;

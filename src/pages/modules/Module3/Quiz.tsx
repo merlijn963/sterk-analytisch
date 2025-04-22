@@ -18,51 +18,122 @@ const Quiz: React.FC = () => {
   const questions: Question[] = [
     {
       id: 1,
-      question: "Een test meet steeds hetzelfde, maar niet het juiste construct. Wat is waar?",
+      question: "Een onderzoek naar sociale angst gebruikt een vragenlijst met items over angst, vermijding, lichamelijke klachten en zelfbeeld. Wat is dit een voorbeeld van?",
       options: [
-        "Wel valide, niet betrouwbaar",
-        "Wel betrouwbaar, niet valide",
-        "Niet valide, niet betrouwbaar",
-        "Wel valide en betrouwbaar"
+        "Criteriumvaliditeit",
+        "Inhoudsvaliditeit",
+        "Interne validiteit",
+        "Externe validiteit"
       ],
       correctAnswer: 1,
-      explanation: "De test is betrouwbaar omdat deze consistent meet, maar niet valide omdat het niet het juiste construct meet."
+      explanation: `
+        ❌ Fout: Dit zegt niets over de relatie met een externe maatstaf, zoals gedrag of prestaties.
+        ✅ Goed: De test dekt alle belangrijke onderdelen van sociale angst — dus de inhoud is volledig.
+        ❌ Fout: Interne validiteit gaat over oorzaak-gevolg, niet over testinhoud.
+        ❌ Fout: Externe validiteit gaat over toepasbaarheid buiten de onderzoeksgroep, niet over wat er precies gemeten wordt.
+      `
     },
     {
       id: 2,
-      question: "Cronbach's Alpha meet:",
+      question: "Een vragenlijst over discipline is gebaseerd op bestaande theorieën over zelfcontrole en doorzettingsvermogen. Welke validiteit wordt hiermee versterkt?",
       options: [
-        "Validiteit",
-        "Betrouwbaarheid",
         "Constructvaliditeit",
-        "Toevalsmeetfout"
+        "Interne validiteit",
+        "Criteriumvaliditeit",
+        "Face validity"
       ],
-      correctAnswer: 1,
-      explanation: "Cronbach's Alpha is een maat voor de interne consistentie en daarmee voor de betrouwbaarheid van een meetinstrument."
+      correctAnswer: 0,
+      explanation: `
+        ✅ Goed: De test is gebaseerd op theoretische definities van het construct ‘discipline’.
+        ❌ Fout: Die gaat over storende factoren binnen een experiment.
+        ❌ Fout: Die gaat over of de test overeenkomt met een externe uitkomst, zoals werkprestaties.
+        ❌ Fout: Die zegt iets over of de test er logisch uitziet — niet of hij goed gebaseerd is op theorie.
+      `
     },
     {
       id: 3,
-      question: "De vragen van een test behandelen slechts een deel van het onderwerp. Wat ontbreekt?",
+      question: "Een HR-afdeling ontwikkelt een test om teamwork te meten. Ze vergelijken de testresultaten met beoordelingen van teamleiders. Welke validiteit is hier van toepassing?",
       options: [
-        "Betrouwbaarheid",
-        "Constructvaliditeit",
         "Inhoudsvaliditeit",
+        "Constructvaliditeit",
+        "Criteriumvaliditeit",
         "Interne validiteit"
       ],
       correctAnswer: 2,
-      explanation: "Inhoudsvaliditeit ontbreekt omdat niet alle belangrijke aspecten van het construct worden gemeten."
+      explanation: `
+        ❌ Fout: Die zegt of alle onderdelen van teamwork in de test zitten, niet of het overeenkomt met iets anders.
+        ❌ Fout: Die gaat over of de test theoretisch goed aansluit.
+        ✅ Goed: De test wordt vergeleken met een externe maatstaf (de beoordelingen van leidinggevenden).
+        ❌ Fout: Dat heeft te maken met oorzaak-gevolgrelaties in experimenten.
+      `
     },
     {
       id: 4,
-      question: "Een IQ-test bevat vooral motivatievragen. Wat is fout?",
+      question: "Een vragenlijst over mentale gezondheid bevat herkenbare en logische vragen volgens de deelnemers, maar is niet wetenschappelijk gevalideerd. Wat zegt dit over de validiteit?",
       options: [
-        "Het is niet betrouwbaar",
-        "Het is niet valide",
-        "Het is volledig valide",
-        "Cronbach's Alpha is te laag"
+        "Hoge inhoudsvaliditeit",
+        "Lage betrouwbaarheid",
+        "Hoge face validity",
+        "Lage constructvaliditeit"
       ],
-      correctAnswer: 1,
-      explanation: "De test is niet valide omdat deze niet meet wat het pretendeert te meten (intelligentie)."
+      correctAnswer: 2,
+      explanation: `
+        ❌ Fout: Dat kun je alleen zeggen als het echt alle onderdelen van het onderwerp dekt — hier gaat het alleen om indruk.
+        ❌ Fout: Niets in de vraag wijst op onbetrouwbare (wisselende) uitkomsten.
+        ✅ Goed: De test ziet er logisch uit voor gebruikers, ook al is hij niet wetenschappelijk getest.
+        ❌ Fout: Misschien klopt dat ook, maar de vraag zegt daar niks over — de nadruk ligt op hoe het eruitziet.
+      `
+    },
+    {
+      id: 5,
+      question: "Onderzoekers testen het effect van een nieuwe training, maar vergeten dat sommige deelnemers ook al extra coaching kregen. Wat raakt hierdoor verstoord?",
+      options: [
+        "Externe validiteit",
+        "Face validity",
+        "Inhoudsvaliditeit",
+        "Interne validiteit"
+      ],
+      correctAnswer: 3,
+      explanation: `
+        ❌ Fout: Dat gaat over toepasbaarheid buiten de onderzoeksgroep, niet over verstoring binnen het experiment.
+        ❌ Fout: Hier gaat het niet om hoe logisch iets eruitziet.
+        ❌ Fout: Het probleem zit niet in de testinhoud.
+        ✅ Goed: Er is een andere factor (extra coaching) die het effect kan verklaren → dus oorzaak-gevolg is niet duidelijk.
+      `
+    },
+    {
+      id: 6,
+      question: "Een studie over gastvrijheid wordt uitgevoerd op een klein resort, maar de resultaten worden toegepast op grote stadshotels wereldwijd. Welke validiteit is hier mogelijk beperkt?",
+      options: [
+        "Interne validiteit",
+        "Constructvaliditeit",
+        "Externe validiteit",
+        "Criteriumvaliditeit"
+      ],
+      correctAnswer: 2,
+      explanation: `
+        ❌ Fout: Intern klopt het misschien prima — het probleem is juist de toepasbaarheid buiten de context.
+        ❌ Fout: Er is geen reden om te denken dat het construct fout gemeten wordt.
+        ✅ Goed: Je weet niet zeker of de resultaten van het resort ook gelden voor grote hotels — dus generaliseerbaarheid is beperkt.
+        ❌ Fout: Er wordt niets vergeleken met een externe maatstaf of uitkomst.
+      `
+    },
+    {
+      id: 7,
+      question: "Een onderzoeker meet motivatie met een test die elke keer andere resultaten oplevert bij dezelfde persoon, onder dezelfde omstandigheden. Wat is het probleem?",
+      options: [
+        "Betrouwbaarheid",
+        "Face validity",
+        "Criteriumvaliditeit",
+        "Externe validiteit"
+      ],
+      correctAnswer: 0,
+      explanation: `
+        ✅ Goed: De test is niet consistent — dus de betrouwbaarheid is laag.
+        ❌ Fout: Dit zegt niets over hoe de test eruitziet.
+        ❌ Fout: Er wordt niets gezegd over vergelijking met een andere uitkomst.
+        ❌ Fout: We hebben geen informatie over toepasbaarheid buiten de steekproef.
+      `
     }
   ];
 
@@ -71,6 +142,19 @@ const Quiz: React.FC = () => {
     newAnswers[currentQuestion] = answerIndex;
     setAnswers(newAnswers);
     setShowFeedback(true);
+  };
+
+  const getFeedback = () => {
+    const selectedAnswer = answers[currentQuestion];
+    if (selectedAnswer === currentQ.correctAnswer) {
+      return `✅ Goed: ${currentQ.explanation.split('✅ Goed: ')[1]?.split('❌')[0].trim()}`;
+    } else {
+      const incorrectExplanation = currentQ.explanation
+        .split('❌ Fout: ')[selectedAnswer + 1]
+        ?.split('✅')[0]
+        .trim();
+      return `❌ Fout: ${incorrectExplanation}`;
+    }
   };
 
   const handleNext = () => {
@@ -87,6 +171,9 @@ const Quiz: React.FC = () => {
       // Navigeer naar dashboard als score ≥ 70%
       if (percentage >= 70) {
         navigate('/dashboard');
+      } else {
+        // Toon een bericht als de score lager is dan 70%
+        alert(`Je hebt de quiz afgerond met een score van ${percentage}%. Probeer het opnieuw!`);
       }
     }
   };
@@ -129,7 +216,7 @@ const Quiz: React.FC = () => {
 
         {showFeedback && (
           <div className="mt-6 p-4 bg-gray-50 rounded-md">
-            <p className="text-gray-700">{currentQ.explanation}</p>
+            <p className="text-gray-700">{getFeedback()}</p>
           </div>
         )}
 
@@ -149,4 +236,4 @@ const Quiz: React.FC = () => {
   );
 };
 
-export default Quiz; 
+export default Quiz;

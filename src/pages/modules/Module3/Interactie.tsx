@@ -47,6 +47,58 @@ const items: DragItem[] = [
   }
 ];
 
+const renderVisualization = (item: DragItem) => {
+  if (item.id === '1') {
+    return (
+      <div className="visualization">
+        <p className="text-sm font-medium">Hoge betrouwbaarheid, lage validiteit</p>
+        <div className="flex space-x-2 mt-2">
+          <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">Alle metingen zijn consistent, maar niet correct.</p>
+      </div>
+    );
+  } else if (item.id === '2') {
+    return (
+      <div className="visualization">
+        <p className="text-sm font-medium">Incompleet meetinstrument</p>
+        <div className="flex space-x-2 mt-2">
+          <div className="w-8 h-8 bg-red-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+          <div className="w-8 h-8 bg-red-500 rounded-full"></div>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">Sommige aspecten worden niet gemeten.</p>
+      </div>
+    );
+  } else if (item.id === '3') {
+    return (
+      <div className="visualization">
+        <p className="text-sm font-medium">Hoge interne consistentie</p>
+        <div className="flex space-x-2 mt-2">
+          <div className="w-8 h-8 bg-green-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-green-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-green-500 rounded-full"></div>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">Alle items meten hetzelfde construct.</p>
+      </div>
+    );
+  } else if (item.id === '4') {
+    return (
+      <div className="visualization">
+        <p className="text-sm font-medium">Slechte praktijkvoorspelling</p>
+        <div className="flex space-x-2 mt-2">
+          <div className="w-8 h-8 bg-yellow-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">De test voorspelt de praktijk niet goed.</p>
+      </div>
+    );
+  }
+  return null;
+};
+
 const Interactie: React.FC = () => {
   const navigate = useNavigate();
   const [draggedItem, setDraggedItem] = useState<DragItem | null>(null);
@@ -129,9 +181,10 @@ const Interactie: React.FC = () => {
               >
                 <p>{item.text}</p>
                 {showFeedback && (
-                  <p className="mt-2 text-sm italic">
-                    {item.explanation}
-                  </p>
+                  <>
+                    <p className="mt-2 text-sm italic">{item.explanation}</p>
+                    <div className="mt-4">{renderVisualization(item)}</div>
+                  </>
                 )}
               </div>
             ))}
@@ -223,4 +276,4 @@ const Interactie: React.FC = () => {
   );
 };
 
-export default Interactie; 
+export default Interactie;

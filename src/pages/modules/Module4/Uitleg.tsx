@@ -61,9 +61,9 @@ const Uitleg: React.FC = () => {
             bgColor="bg-red-50"
           />
           <SamplingMethod
-            title="Doelgericht (Purposive)"
-            description="Deelnemers worden bewust gekozen op basis van specifieke kenmerken."
-            example="Alleen ervaren docenten selecteren voor een onderzoek naar onderwijsmethoden."
+            title="Self-Selection"
+            description="Deelnemers kiezen zelf of ze willen deelnemen aan het onderzoek."
+            example="Een online enquête die openstaat voor iedereen die wil deelnemen."
             bgColor="bg-indigo-50"
           />
           <SamplingMethod
@@ -71,6 +71,12 @@ const Uitleg: React.FC = () => {
             description="Deelnemers worden gevraagd om andere potentiële deelnemers aan te dragen."
             example="Sporters vragen om andere sporters aan te bevelen voor je onderzoek."
             bgColor="bg-pink-50"
+          />
+          <SamplingMethod
+            title="Quota"
+            description="Steekproeven binnen relatief vaste subpopulaties, maar niet op een willekeurige manier."
+            example="Als een hotel 80% kamers en 20% suites heeft, kies je simpelweg 4 mensen uit kamers en 1 persoon uit een suite."
+            bgColor="bg-orange-50"
           />
         </div>
       </div>
@@ -93,4 +99,4 @@ const Uitleg: React.FC = () => {
   );
 };
 
-export default Uitleg; 
+export default Uitleg;
